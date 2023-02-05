@@ -68,18 +68,9 @@ def next_turn(snake, food):
         x += SPACE_SIZE
     
     snake.coordinates.insert(0, (x, y))
-    if first_time:
-        to_add = random.randint(-1000, 1000)
-        linked_list.append(to_add)
-        print(linked_list)
-        circle = canvas.create_oval(x, y, x + SPACE_SIZE, y + SPACE_SIZE, fill=SNAKE_COLOR)
-        canvas.create_text((x+x+SPACE_SIZE)/2,(y+y+SPACE_SIZE)/2,text=str(to_add))
-        first_time = False
-    else:
-        circle = canvas.create_oval(x, y, x + SPACE_SIZE, y + SPACE_SIZE, fill=SNAKE_COLOR)
-        # canvas.create_text((x+x+SPACE_SIZE)/2,(y+y+SPACE_SIZE)/2,text=str(to_add))
-    snake.circles.insert(0, circle)
-    if x == snake.coordinates[0] and y == snake.coordinates[1]:
+    square = canvas.create_rectangle(x, y, x + SPACE_SIZE, y + SPACE_SIZE, fill=SNAKE_COLOR)
+    snake.squares.insert(0, square)
+    if x == food.coordinates[0] and y == food.coordinates[1]:
         global score
         score += 1  
         to_add = random.randint(-1000, 1000)
