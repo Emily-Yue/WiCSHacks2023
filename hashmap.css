@@ -35,8 +35,9 @@ body{
 }
 
 #title{
-  font-family: 'Space Mono', monospace;
   text-align: center;
+  text-align: center;
+  font-family: 'Space Mono', monospace;
 }
 
 #hash_machine {
@@ -57,6 +58,9 @@ body{
   width: 150px;
   height: 100px;
   background-color: blue;
+  text-align: center;
+  font-family: 'Space Mono', monospace;
+    
 }
 
 #two{
@@ -64,6 +68,8 @@ body{
   width: 150px;
   height: 100px;
   background-color: red;
+  text-align: center;
+  font-family: 'Space Mono', monospace;
 }
 
 #three{
@@ -71,6 +77,8 @@ body{
   width: 150px;
   height: 100px;
   background-color: green;
+  text-align: center;
+  font-family: 'Space Mono', monospace;
 }
 
 #four{
@@ -78,6 +86,8 @@ body{
   width: 150px;
   height: 100px;
   background-color: purple;
+  text-align: center;
+  font-family: 'Space Mono', monospace;
 }
 
 .array-element{
