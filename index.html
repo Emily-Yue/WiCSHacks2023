@@ -1,11 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <link rel="stylesheet" href="styles.css">
-    </head>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="index.js"></script>
+        <link href="styles.css" rel="stylesheet" type="text/css">
+        <style>
 
+        </style>
+    </head>
     <body>
-        <h1>This is a heading</h1>
-        <p>This is a paragraph.</p>
+        <div class="wrapper">
+            <!--Top menu -->
+            <div class="sidebar">
+                <div class="logo">
+                    <img src="res/fake_logo.png" alt="logo">
+                    <h3>Product </h3>
+                </div>
+                <!--menu item-->
+                <ul id="menu_ul">
+                    <li>
+                        <a href="#" class="active">
+                            <span class="icon"><i class="fas fa-home"></i></span>
+                            <span class="item">Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fas fa-desktop"></i></span>
+                            <span class="item">Arcade</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fas fa-user-friends"></i></span>
+                            <span class="item">Leaderboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fas fa-tachometer-alt"></i></span>
+                            <span class="item">Stats</span>
+                        </a>
+                    </li> 
+                </ul>     
+            </div>
+
+
+            <div class = "main">
+                <h1>Your Current Games</h1>
+
+                <div class="box-container">
+ 
+                    <div class="box box1" id="first-one">
+                        <img src= "https://media.geeksforgeeks.org/wp-content/uploads/20221210184645/Untitled-design-(31).png"
+                            alt="Views">
+                        <div class="text">
+                            <h2 class="topic-heading">Linked List Snake</h2>
+                            <h2 class="topic">Article Views</h2>
+                        </div>
+     
+                    </div>
+     
+                    <div class="box box2">
+                        <img src= "https://media.geeksforgeeks.org/wp-content/uploads/20221210184645/Untitled-design-(31).png"
+                            alt="Views">
+                        <div class="text">
+                            <h2 class="topic-heading">Papa's Pipeline</h2>
+                            <h2 class="topic">Likes</h2>
+                        </div>
+     
+        
+                    </div>
+                </div>  
+                
+
+            </div>  
+            
+        </div>
+    
     </body>
+
 </html>
