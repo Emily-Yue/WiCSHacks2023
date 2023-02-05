@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
 
 *{
     list-style: none;
     text-decoration: none;
-    margin: 0;
+    /* margin: 0; */
     padding: 0;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
@@ -17,17 +18,17 @@
     --primary-color: #4b49ac;
     --secondary-color: #0c007d;
     --Border-color: #3f0097;
-    --one-use-color: #3f0097;
-    --two-use-color:  #A4036F; 
+    --one-use-color: #fe558c;
+    --two-use-color:  #7bc7d6; 
   }
 
 body{
     /* background: #f5f6fa; */
-    background: #048BA8;
+    background: #000000;
 }
 
 .wrapper .sidebar{
-    background-color: #570861;
+    background-color: rgb(41, 41, 41);
     /* background: rgb(5, 68, 104); */
     position: fixed;
     top: 0;
@@ -85,7 +86,7 @@ body{
 
 .wrapper .sidebar ul li a:hover,
 .wrapper .sidebar ul li a.active{
-    color: #0c7db1;
+    color: black;
     background:white;
     border-right: 2px solid rgb(5, 68, 104);
     border-radius: 9px;
@@ -94,7 +95,7 @@ body{
 
 .wrapper .sidebar ul li a:hover .icon,
 .wrapper .sidebar ul li a.active .icon{
-    color: #0c7db1;
+    color: #7bc7d6;
 }
 
 .wrapper .sidebar ul li a:hover:before,
@@ -109,7 +110,9 @@ body{
 }
 
 .main h1{
-    font-size: 24px;
+    font-size: 40px;
+    font-family: 'Roboto Mono', monospace;
+    color: #ffffff;
 }
 
 .box-container {
@@ -168,7 +171,7 @@ body{
     margin-left: 10px;
 }
 .topic {
-    font-size: 13px;
+    font-size: 8px;
     font-weight: 400;
     letter-spacing: 1px;
 }
