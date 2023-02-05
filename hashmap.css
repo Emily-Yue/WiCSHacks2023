@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+
+body{
+  background-color: gray;
+}
+
+#generate_button{
+  border-radius: 9px;
+  width: 129px;
+  height: 44px;
+  background-color: #8D918D;
+  margin-left: 48px;
+  font-family: 'Space Mono', monospace;
+}
+
+
+#container {
+  width: 400px;
+  height: 400px;
+  position: relative;
+}
+#animate {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  /* background-color: gray; */
+  top: 44px;
+  left: 146px;
+  text-align: center;
+  padding-top: 14px;
+  font-size: 15px;
+  background-color: black;
+  color: white;
+}
+
+#title{
+  font-family: 'Space Mono', monospace;
+  text-align: center;
+}
+
+#hash_machine {
+  height: 206px;
+  margin-left: 114px;
+  position: absolute;
+}
+
+#array {
+  width: 800px;
+  height: 100px;
+  margin-left: 600px;
+  display: flex;
+}
+
+#one{
+  margin-right: 14px;
+  width: 150px;
+  height: 100px;
+  background-color: blue;
+}
+
+#two{
+  margin-right: 14px;
+  width: 150px;
+  height: 100px;
+  background-color: red;
+}
+
+#three{
+  margin-right: 14px;
+  width: 150px;
+  height: 100px;
+  background-color: green;
+}
+
+#four{
+  /* margin-right: 14px; */
+  width: 150px;
+  height: 100px;
+  background-color: purple;
+}
+
+.array-element{
+  color:white;
+  border-radius: 14px;
+}
+
+.here_button{
+  margin: 28px;
+  border-radius: 7px;
+  width: 96px;
+  height: 45px;
+  font-family: 'Space Mono', monospace;
+}
