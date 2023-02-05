@@ -24,8 +24,8 @@ class Snake:
         self.body_size = BODY_PARTS
         self.coordinates = []
         self.squares = []
-        self.texts = []
-        # self.text_coordinates = []
+        self.texts = [] # the values in the linked list
+
         for i in range(0, BODY_PARTS):
             self.coordinates.append([0, 0])
         i = 0
@@ -38,6 +38,7 @@ class Snake:
 
 class Food:
     def __init__(self):
+        # makes a new food with random value at random coordinate on screen
         x = random.randint(0, (GAME_WIDTH / SPACE_SIZE)-1) * SPACE_SIZE
         y = random.randint(0, (GAME_HEIGHT / SPACE_SIZE) - 1) * SPACE_SIZE
         self.coordinates = [x, y]
@@ -65,31 +66,26 @@ def next_turn(snake, food):
         x += SPACE_SIZE
         case = 4
     
+    # creating new node - will stay if food not hit
     snake.coordinates.insert(0, (x, y))
     circle = canvas.create_oval(x, y, x + SPACE_SIZE, y + SPACE_SIZE, fill=SNAKE_COLOR)
     snake.squares.insert(0, circle)
+
+    # rerender the linked list
     if not(x == food.coordinates[0] and y == food.coordinates[1]):
         canvas.delete("node_val")
         snake.texts = []
-        # print(snake.text_coordinates)
         print(linked_list)
         for i in range(len(linked_list)):
             a, b = snake.coordinates[i]
-            # if case == 1:
-            #     b -= SPACE_SIZE
-            # elif case == 2:
-            #     b += SPACE_SIZE
-            # elif case == 3:
-            #     a -= SPACE_SIZE
-            # elif case == 4:
-            #     a += SPACE_SIZE
             node_val = canvas.create_text((a+a+SPACE_SIZE)/2,(b+b+SPACE_SIZE)/2,font=('Helvetica 15 bold'), text=str(linked_list[i]),tag="node_val")
             snake.texts.append(node_val)
-    # creating new node - will stay if food not hit
-    # texty_text = canvas.create_text((x + x + SPACE_SIZE)/2, (y + y + SPACE_SIZE)/2, fill="white")
-    # snake.texts.insert(0, texty_text)
+    
+    # manually add the text of the last node
     node_vall = canvas.create_text((x+x+SPACE_SIZE)/2,(y+y+SPACE_SIZE)/2,font=('Helvetica 15 bold'), text=str(linked_list[len(linked_list)-1]),tag="node_val")
     snake.texts.append(node_vall)
+
+    # ate the food
     if x == food.coordinates[0] and y == food.coordinates[1]:
         global score
         score += 1
@@ -100,7 +96,8 @@ def next_turn(snake, food):
         linked_list.sort()
         snake.texts = []
         canvas.delete("node_val")
-        # print(snake.text_coordinates)
+
+        # rerender the list to include the new value
         for i in range(len(linked_list)):
             a, b = snake.coordinates[i]
             node_val = canvas.create_text((a+a+SPACE_SIZE)/2,(b+b+SPACE_SIZE)/2,font=('Helvetica 15 bold'),text=str(linked_list[i]),tag="node_val")
